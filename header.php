@@ -1,64 +1,290 @@
-<?php
-/**
- * The header for our theme
- *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+<!DOCTYPE html>
+<html <?php language_attributes(); ?> >
 
-?>
-    <!DOCTYPE html>
-    <html <?php language_attributes(); ?> class="no-js no-svg">
+<head>
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
 
-    <head>
-        <meta charset="<?php bloginfo( 'charset' ); ?>">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="profile" href="http://gmpg.org/xfn/11">
+    <?php wp_head(); ?>
+</head>
+<body>
+	<!-- Main navbar -->
+	<div class="navbar navbar-inverse bg-indigo">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/dungtienlogotab.png" alt=""></a>
 
-        <?php wp_head(); ?>
-    </head>
+			<ul class="nav navbar-nav visible-xs-block">
+				<li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
+				<li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+			</ul>
+		</div>
 
-    <body <?php body_class(); ?>>
-        <div id="page" class="site">
-            <a class="skip-link screen-reader-text" href="#content">
-                <?php _e( 'Skip to content', 'twentyseventeen' ); ?>
-            </a>
+		<div class="navbar-collapse collapse" id="navbar-mobile">
+			<ul class="nav navbar-nav">
+				<li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
 
-            <header id="masthead" class="site-header" role="banner">
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<i class="icon-puzzle3"></i>
+						<span class="visible-xs-inline-block position-right">Git updates</span>
+						<span class="status-mark border-orange-400"></span>
+					</a>
+					
+					<div class="dropdown-menu dropdown-content">
+						<div class="dropdown-content-heading">
+							Git updates
+							<ul class="icons-list">
+								<li><a href="#"><i class="icon-sync"></i></a></li>
+							</ul>
+						</div>
 
-                <?php get_template_part( 'template-parts/header/header', 'image' ); ?>
+						<ul class="media-list dropdown-content-body width-350">
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-pull-request"></i></a>
+								</div>
 
-                <?php if ( has_nav_menu( 'top' ) ) : ?>
-                <div class="navigation-top">
-                    <div class="wrap">
-                        <?php get_template_part( 'template-parts/navigation/navigation', 'top' ); ?>
-                    </div>
-                    <!-- .wrap -->
-                </div>
-                <!-- .navigation-top -->
-                <?php endif; ?>
+								<div class="media-body">
+									Drop the IE <a href="#">specific hacks</a> for temporal inputs
+									<div class="media-annotation">4 minutes ago</div>
+								</div>
+							</li>
 
-            </header>
-            <!-- #masthead -->
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="btn border-warning text-warning btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-commit"></i></a>
+								</div>
+								
+								<div class="media-body">
+									Add full font overrides for popovers and tooltips
+									<div class="media-annotation">36 minutes ago</div>
+								</div>
+							</li>
 
-            <?php
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="btn border-info text-info btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-branch"></i></a>
+								</div>
+								
+								<div class="media-body">
+									<a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span> branch
+									<div class="media-annotation">2 hours ago</div>
+								</div>
+							</li>
 
-	/*
-	 * If a regular post or page, and not the front page, show the featured image.
-	 * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
-	 */
-	if ( ( is_single() || ( is_page() && ! twentyseventeen_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
-		echo '<div class="single-featured-image-header">';
-		echo get_the_post_thumbnail( get_queried_object_id(), 'twentyseventeen-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
-	?>
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="btn border-success text-success btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-merge"></i></a>
+								</div>
+								
+								<div class="media-body">
+									<a href="#">Eugene Kopyov</a> merged <span class="text-semibold">Master</span> and <span class="text-semibold">Dev</span> branches
+									<div class="media-annotation">Dec 18, 18:36</div>
+								</div>
+							</li>
 
-                <div class="site-content-contain">
-                    <div id="content" class="site-content">
+							<li class="media">
+								<div class="media-left">
+									<a href="#" class="btn border-primary text-primary btn-flat btn-rounded btn-icon btn-sm"><i class="icon-git-pull-request"></i></a>
+								</div>
+								
+								<div class="media-body">
+									Have Carousel ignore keyboard events
+									<div class="media-annotation">Dec 12, 05:46</div>
+								</div>
+							</li>
+						</ul>
+
+						<div class="dropdown-content-footer">
+							<a href="#" data-popup="tooltip" title="All activity"><i class="icon-menu display-block"></i></a>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<div class="navbar-right">
+				<p class="navbar-text">Morning, Victoria!</p>
+				<p class="navbar-text"><span class="label bg-success-400">Online</span></p>
+				
+				<ul class="nav navbar-nav">				
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-bell2"></i>
+							<span class="visible-xs-inline-block position-right">Activity</span>
+							<span class="status-mark border-orange-400"></span>
+						</a>
+
+						<div class="dropdown-menu dropdown-content">
+							<div class="dropdown-content-heading">
+								Activity
+								<ul class="icons-list">
+									<li><a href="#"><i class="icon-menu7"></i></a></li>
+								</ul>
+							</div>
+
+							<ul class="media-list dropdown-content-body width-350">
+								<li class="media">
+									<div class="media-left">
+										<a href="#" class="btn bg-success-400 btn-rounded btn-icon btn-xs"><i class="icon-mention"></i></a>
+									</div>
+
+									<div class="media-body">
+										<a href="#">Taylor Swift</a> mentioned you in a post "Angular JS. Tips and tricks"
+										<div class="media-annotation">4 minutes ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="media-left">
+										<a href="#" class="btn bg-pink-400 btn-rounded btn-icon btn-xs"><i class="icon-paperplane"></i></a>
+									</div>
+									
+									<div class="media-body">
+										Special offers have been sent to subscribed users by <a href="#">Donna Gordon</a>
+										<div class="media-annotation">36 minutes ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="media-left">
+										<a href="#" class="btn bg-blue btn-rounded btn-icon btn-xs"><i class="icon-plus3"></i></a>
+									</div>
+									
+									<div class="media-body">
+										<a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span> branch in <span class="text-semibold">Limitless</span> repository
+										<div class="media-annotation">2 hours ago</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="media-left">
+										<a href="#" class="btn bg-purple-300 btn-rounded btn-icon btn-xs"><i class="icon-truck"></i></a>
+									</div>
+									
+									<div class="media-body">
+										Shipping cost to the Netherlands has been reduced, database updated
+										<div class="media-annotation">Feb 8, 11:30</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="media-left">
+										<a href="#" class="btn bg-warning-400 btn-rounded btn-icon btn-xs"><i class="icon-bubble8"></i></a>
+									</div>
+									
+									<div class="media-body">
+										New review received on <a href="#">Server side integration</a> services
+										<div class="media-annotation">Feb 2, 10:20</div>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="media-left">
+										<a href="#" class="btn bg-teal-400 btn-rounded btn-icon btn-xs"><i class="icon-spinner11"></i></a>
+									</div>
+									
+									<div class="media-body">
+										<strong>January, 2016</strong> - 1320 new users, 3284 orders, $49,390 revenue
+										<div class="media-annotation">Feb 1, 05:46</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon-bubble8"></i>
+							<span class="visible-xs-inline-block position-right">Messages</span>
+							<span class="status-mark border-orange-400"></span>
+						</a>
+						
+						<div class="dropdown-menu dropdown-content width-350">
+							<div class="dropdown-content-heading">
+								Messages
+								<ul class="icons-list">
+									<li><a href="#"><i class="icon-compose"></i></a></li>
+								</ul>
+							</div>
+
+							<ul class="media-list dropdown-content-body">
+								<li class="media">
+									<div class="media-left">
+										<img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+										<span class="badge bg-danger-400 media-badge">5</span>
+									</div>
+
+									<div class="media-body">
+										<a href="#" class="media-heading">
+											<span class="text-semibold">James Alexander</span>
+											<span class="media-annotation pull-right">04:58</span>
+										</a>
+
+										<span class="text-muted">who knows, maybe that would be the best thing for me...</span>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="media-left">
+										<img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+										<span class="badge bg-danger-400 media-badge">4</span>
+									</div>
+
+									<div class="media-body">
+										<a href="#" class="media-heading">
+											<span class="text-semibold">Margo Baker</span>
+											<span class="media-annotation pull-right">12:16</span>
+										</a>
+
+										<span class="text-muted">That was something he was unable to do because...</span>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+									<div class="media-body">
+										<a href="#" class="media-heading">
+											<span class="text-semibold">Jeremy Victorino</span>
+											<span class="media-annotation pull-right">22:48</span>
+										</a>
+
+										<span class="text-muted">But that would be extremely strained and suspicious...</span>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+									<div class="media-body">
+										<a href="#" class="media-heading">
+											<span class="text-semibold">Beatrix Diaz</span>
+											<span class="media-annotation pull-right">Tue</span>
+										</a>
+
+										<span class="text-muted">What a strenuous career it is that I've chosen...</span>
+									</div>
+								</li>
+
+								<li class="media">
+									<div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+									<div class="media-body">
+										<a href="#" class="media-heading">
+											<span class="text-semibold">Richard Vango</span>
+											<span class="media-annotation pull-right">Mon</span>
+										</a>
+										
+										<span class="text-muted">Other travelling salesmen live a life of luxury...</span>
+									</div>
+								</li>
+							</ul>
+
+							<div class="dropdown-content-footer">
+								<a href="#" data-popup="tooltip" title="All messages"><i class="icon-menu display-block"></i></a>
+							</div>
+						</div>
+					</li>					
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /main navbar -->
