@@ -1,51 +1,59 @@
-<?php
-get_header(); ?>
+<?php get_header(); ?>
+<div id="container">
+    <div id="content" class="pageContent">
 
-<div class="wrap">
-	<?php if ( is_home() && ! is_front_page() ) : ?>
-		<header class="page-header">
-			<h1 class="page-title"><?php single_post_title(); ?></h1>
-		</header>
-	<?php else : ?>
-	<header class="page-header">
-		<h2 class="page-title"><?php _e( 'Posts', 'twentyseventeen' ); ?></h2>
-	</header>
-	<?php endif; ?>
+        <h1 class="entry-title">
+            <?php the_title(); ?>
+        </h1>
+        <!-- Page Title -->
+        <?php
+		// TO SHOW THE PAGE CONTENTS
+		while ( have_posts() ) : the_post(); ?>
+            <!--Because the_content() works only inside a WP Loop -->
+            <div class="entry-content-page">
+                <?php the_content(); ?>
+                <!-- Page Content -->
+            </div>
+            <!-- .entry-content-page -->
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+            <?php
+		endwhile; //resetting the page loop
+		wp_reset_query(); //resetting the page query
+		?>
 
-			<?php
-			if ( have_posts() ) :
+                <?php
+		// TO SHOW THE POST CONTENTS
+		?>
+                    <?php
+			$my_query = new WP_Query( 'cat=1' ); // I used a category id 1 as an example
+			?>
+                        <?php if ( $my_query->have_posts() ) : ?>
+                        <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                            <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
 
-				/* Start the Loop */
-				while ( have_posts() ) : the_post();
+                            <h1 class="entry-title">
+                                <?php the_title(); ?>
+                            </h1>
+                            <!-- Queried Post Title -->
+                            <div class="entry-content">
+                                <?php the_excerpt(); ?>
+                                <!-- Queried Post Excerpts -->
+                            </div>
+                            <!-- .entry-content -->
 
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/post/content', get_post_format() );
+                            <?php endwhile; //resetting the post loop ?>
 
-				endwhile;
+                        </div>
+                        <!-- #post-<?php the_ID(); ?> -->
 
-				the_posts_pagination( array(
-					'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous page', 'twentyseventeen' ) . '</span>',
-					'next_text' => '<span class="screen-reader-text">' . __( 'Next page', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-					'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyseventeen' ) . ' </span>',
-				) );
-
-			else :
-
-				get_template_part( 'template-parts/post/content', 'none' );
-
+                        <?php
+			wp_reset_postdata(); //resetting the post query
 			endif;
 			?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
-</div><!-- .wrap -->
+    </div>
+    <!-- #content -->
+</div>
+<!-- #container -->
 
-<?php get_footer();
+<?php get_footer(); ?>
