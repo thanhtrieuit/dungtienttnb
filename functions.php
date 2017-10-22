@@ -9,6 +9,15 @@ function theme_global_stylesheet() {
 }
 add_action( 'wp_enqueue_scripts', 'theme_global_stylesheet' );
 
+/* Global stylesheet */
+function theme_global_js() {
+	wp_enqueue_script( 'pace-js', get_template_directory_uri() . '/assets/js/plugins/loaders/pace.min.js' );
+    wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/assets/js/core/libraries/bootstrap.min.js' );
+	wp_enqueue_script( 'blockui-js', get_template_directory_uri() . 'assets/js/plugins/loaders/blockui.min.js' );
+    wp_enqueue_script( 'jquery' );
+}
+add_action( 'wp_enqueue_scripts', 'theme_global_js' );
+
 /* Google font */
 function wpb_add_google_fonts() {
     wp_enqueue_style( 'wpb-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900', false ); 
