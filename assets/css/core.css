@@ -3552,6 +3552,7 @@ select[multiple].input-group-xs > .input-group-btn > .btn {
 @media (min-width: 769px) {
   .navbar-header {
     margin-left: -20px;
+    background-color: #fff;
   }
 }
 .navbar-collapse {
@@ -3682,7 +3683,7 @@ select[multiple].input-group-xs > .input-group-btn > .btn {
 }
 .navbar-brand > img {
   margin-top: 0px;
-  height: 28px;
+  height: 35px;
 }
 .navbar-nav {
   margin: 0;

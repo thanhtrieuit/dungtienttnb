@@ -4267,7 +4267,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 15px 20px;
+  padding: 5px 20px;
   font-size: 14px;
   line-height: 20px;
   height: 50px;
@@ -4592,7 +4592,6 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
   color: #fff;
-  background-color: transparent;
 }
 .navbar-inverse .navbar-text {
   color: rgba(255, 255, 255, 0.9);
@@ -4842,7 +4841,6 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
-  color: #fff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
