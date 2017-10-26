@@ -39,7 +39,7 @@
 
 								<!-- Main -->
 								<li class="navigation-header"><span>Menu chính</span> <i class="icon-menu" title="Main pages"></i></li>
-								<li class="active"><a href="index.html"><i class="icon-home4"></i> <span>Dashboard</span></a></li>
+								<li class="active"><a href="index.html"><i class="icon-home4"></i> <span>Bản Tin</span></a></li>
 								<li>
 									<a href="#"><i class="icon-stack2"></i> <span>Page layouts</span></a>
 									<ul>
@@ -135,10 +135,10 @@
 				<div class="content">
                     <!-- Thong tin noi bo -->
                     <div class="row">
-                        <div class="col-lg-5">
-                            <div class="panel panel-flat">
+                        <div class="col-lg-4">
+                            <div class="panel panel-white">
                                 <div class="panel-heading">
-                                    <h6 class="panel-title alert-heading text-semibold">Bản tin nội bộ</h6>
+                                    <h6 class="text-semibold panel-title">Bản tin dịch vụ phụ tùng</h6>
                                     <div class="heading-elements">
                                         <ul class="icons-list">
                                             <li><a data-action="collapse"></a></li>
@@ -146,53 +146,21 @@
                                             <li><a data-action="close"></a></li>
                                         </ul>
                                     </div>
-                                </div>
-                                <div class="table-responsive">
-									<table class="table text-nowrap">
-										<tbody>
-
-
-											<tr>
-												<td>
-													<div class="media-left media-middle">
-                                                        <a href="#" class="btn text-warning-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i class="icon-file-text2"></i></a>
-													</div>
-
-													<div class="media-body">
-														<div class="media-heading">
-															<a href="#" class="letter-icon-title">Sơ đồ tổ chức nhóm Bảo hành và hỗ trợ kỹ thuật (20102017) </a>
-														</div>
-													</div>
-												</td>
-												<td>
-													<span class="text-muted text-size-small">04:52 pm</span>
-												</td>
-											</tr>
-
-											<tr>
-												<td>
-													<div class="media-left media-middle">
-                                                        <a href="#" class="btn text-warning-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i class="icon-file-text2"></i></a>
-													</div>
-
-													<div class="media-body">
-														<div class="media-heading">
-															<a href="#" class="letter-icon-title">Sơ đồ tổ chức nhóm Bảo hành và hỗ trợ kỹ thuật (20102017) </a>
-														</div>
-													</div>
-												</td>
-												<td>
-													<span class="text-muted text-size-small">04:52 pm</span>
-												</td>
-											</tr>
-
-
-
-
-
-										</tbody>
-									</table>
-								</div>
+                                </div>                                
+                                <div class="list-group no-border">
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> Thông báo chính sách thưởng cho kỹ thuật trưởng đối với sản phẩm dầu hộp số <span class="badge badge-success position-right">Mới</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> Thông báo chính sách thưởng cho kỹ thuật trưởng đối với sản phẩm dầu hộp số <span class="label text-muted">May 12, 12:30 am</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> Thông báo chính sách thưởng cho kỹ thuật trưởng đối với sản phẩm dầu hộp số <span class="label text-muted">May 12, 12:30 am</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+									   <i class="icon-arrow-right22"></i> Xem thêm (93)
+								    </a>
+                                </div>                              
                             </div>
                             <div class="panel panel-white">
                                 <div class="panel-heading">
@@ -227,10 +195,10 @@
                                 </div>                              
                             </div>
                         </div>
-                        <div class="col-lg-5">
-                            <div class="panel panel-flat">
+                        <div class="col-lg-4">
+                            <div class="panel panel-white">
                                 <div class="panel-heading">
-                                    <h5 class="panel-title">Bản tin phòng event<a class="heading-elements-toggle"><i class="icon-more"></i></a></h5>
+                                    <h6 class="text-semibold panel-title">Bản tin dịch vụ phụ tùng</h6>
                                     <div class="heading-elements">
                                         <ul class="icons-list">
                                             <li><a data-action="collapse"></a></li>
@@ -238,10 +206,62 @@
                                             <li><a data-action="close"></a></li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>                         
+                                </div>                                
+                                <div class="list-group no-border">
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> HSơ đồ tổ chức nhóm Bảo hành và hỗ trợ kỹ thuật (20102017) <span class="label bg-danger-600">New</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> Danh sách học viên tham dự khóa Hướng dẫn viên kỹ thuật (SI)từ 23->25/10/2017 tại miền Nam (chốt) <span class="label bg-danger-600">New</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> Thông báo chính sách thưởng cho kỹ thuật trưởng đối với sản phẩm dầu hộp số <span class="label text-muted">May 12, 12:30 am</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> Thông báo chính sách thưởng cho kỹ thuật trưởng đối với sản phẩm dầu hộp số <span class="label text-muted">May 12, 12:30 am</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> Thông báo chính sách thưởng cho kỹ thuật trưởng đối với sản phẩm dầu hộp số <span class="label text-muted">May 12, 12:30 am</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+									   <i class="icon-arrow-right22"></i> Xem thêm (93)
+								    </a>
+                                </div>                              
+                            </div>
+                            <div class="panel panel-white">
+                                <div class="panel-heading">
+                                    <h6 class="text-semibold panel-title">Bản tin dịch vụ phụ tùng</h6>
+                                    <div class="heading-elements">
+                                        <ul class="icons-list">
+                                            <li><a data-action="collapse"></a></li>
+                                            <li><a data-action="reload"></a></li>
+                                            <li><a data-action="close"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>                                
+                                <div class="list-group no-border">
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> HSơ đồ tổ chức nhóm Bảo hành và hỗ trợ kỹ thuật (20102017) <span class="label bg-danger-600">New</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> Danh sách học viên tham dự khóa Hướng dẫn viên kỹ thuật (SI)từ 23->25/10/2017 tại miền Nam (chốt) <span class="label bg-danger-600">New</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> Thông báo chính sách thưởng cho kỹ thuật trưởng đối với sản phẩm dầu hộp số <span class="label text-muted">May 12, 12:30 am</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> Thông báo chính sách thưởng cho kỹ thuật trưởng đối với sản phẩm dầu hộp số <span class="label text-muted">May 12, 12:30 am</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+                                        <i class="icon-file-text2 text-warning-400"></i> Thông báo chính sách thưởng cho kỹ thuật trưởng đối với sản phẩm dầu hộp số <span class="label text-muted">May 12, 12:30 am</span>
+                                    </a>
+                                    <a href="#" class="list-group-item">
+									   <i class="icon-arrow-right22"></i> Xem thêm (93)
+								    </a>
+                                </div>                              
+                            </div>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-4">
                             <div class="panel panel-flat">
                                 <div class="panel-heading">
                                     <h5 class="panel-title">Tài liệu<a class="heading-elements-toggle"><i class="icon-more"></i></a></h5>
